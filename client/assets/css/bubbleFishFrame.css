@@ -1,0 +1,140 @@
+.Catalogue {
+  width: 100%;
+}
+
+#CollectionPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#MergePanel {
+  display: none;
+  height: auto;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#fishesToMerge {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+.bubbleFishContainer {
+  margin: 0px auto 25px auto;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style-type: none;
+  border-radius: 20px;
+}
+.fish_ListElement {
+  margin: 5px;
+  min-width: 200px;
+  min-height: 200px;
+  /* background-color: aquamarine; */
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  border-radius: 5px;
+  /* Experimental */
+  position: relative;
+}
+.fish_ListElementSelected {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding-top: 5px;
+  position: absolute;
+  width: 50%;
+  height: 12%;
+  background-color: rgb(59, 255, 59);
+  z-index: 2;
+  border-radius: 0px 0px 10px 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (min-width: 600px) {
+  .bubbleFishContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .bubbleFishContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1080px) {
+  .bubbleFishContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*  */
+.catNewFishFeedback_Container {
+  /* border: 1px solid red; */
+  width: 100%;
+  position: fixed;
+  top: 100px;
+  display: none;
+}
+.catNewFishFeedback_Ratio {
+  /* background-color: rgb(255, 198, 198); */
+  padding-top: calc(100% / (16 / 7));
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.catNewFishFeedback_Ratio .content {
+  background-color: rgb(178, 176, 255);
+  position: absolute;
+  top: 0px;
+  width: calc(100% / (16 / 7));
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.catNewFishFeedback_Ratio .content h2 {
+  font-size: 1em;
+  font-weight: bold;
+}
+.closeNewBubbleFishPanel {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: none;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+}
+.closeNewBubbleFishPanel::before {
+  position: absolute;
+  border-radius: 50px;
+  content: "";
+  width: 80%;
+  height: 20%;
+  background-color: white;
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 50%;
+  top: 50%;
+}
+.closeNewBubbleFishPanel::after {
+  position: absolute;
+  border-radius: 50px;
+  content: "";
+  width: 80%;
+  height: 20%;
+  background-color: white;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 50%;
+  top: 50%;
+}
+.newFish {
+  height: 80%;
+  width: 80%;
+}

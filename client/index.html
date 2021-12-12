@@ -1,0 +1,268 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academy kitties</title>
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <script src="assets/bootstrap/js/popper.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./abi.js"></script>
+    <script src="./assets/js/web3.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/mystyle.css" />
+    <link rel="stylesheet" href="assets/css/colors.css" />
+    <link rel="stylesheet" href="assets/css/factory.css" />
+    <link rel="stylesheet" href="assets/css/frontend.css" />
+    <link rel="stylesheet" href="assets/css/cats.css" />
+    <link rel="stylesheet" href="assets/css/bubbleFishFrame.css" />
+    <link rel="stylesheet" href="assets/css/market.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Bubble Fish</div>
+
+      <div class="navButtons">
+        <ul class="options">
+          <li id="NavHome"><a href="#">Home</a></li>
+          <li id="NavCatalogue"><a href="#">Catalogue</a></li>
+          <li id="NavFactory"><a href="#">Factory</a></li>
+        </ul>
+
+        <button class="startButton">Market</button>
+      </div>
+    </nav>
+    <!-- Factory -->
+    <div class="factory">
+      <div align="center" style="margin-top: 40px">
+        <h1 class="c-white" style="font-weight: bold">Bubble Fish - Factory</h1>
+        <p class="c-white">Create your custom Bubble Fish</p>
+      </div>
+
+      <div class="row">
+        <div class="fishSection">
+          <div class="fish_container">
+            <div class="Animator">
+              <div class="back_fin"></div>
+              <div class="lower_fin"></div>
+              <div class="upper_fin lower_fin"></div>
+              <div class="fish">
+                <div class="topFish"></div>
+                <div class="mouth-border">
+                  <div class="mouth"></div>
+                </div>
+                <div class="eye">
+                  <div class="pupile"></div>
+                  <div class="eyebrow_l"></div>
+                </div>
+                <div class="eye eyer_r">
+                  <div class="pupile"></div>
+                  <div class="eyebrow_r"></div>
+                </div>
+              </div>
+              <div class="side_fin"></div>
+              <div class="gill"></div>
+            </div>
+            <div class="dnaDiv" id="catDNA">
+              <b>
+                DNA:
+                <!-- Colors -->
+                <span id="dnabody"></span>
+                <span id="dnalowerbody"></span>
+                <span id="dnaupperfins"></span>
+                <span id="dnalowerfins"></span>
+
+                <!-- Cattributes -->
+                <span id="dnamouthshape"></span>
+                <span id="dnasidefin"></span>
+                <span id="dnaeyeshape"></span>
+                <span id="dnaeyebrown"></span>
+                <span id="dnaanimation"></span>
+                <span id="dnaspecial"></span>
+              </b>
+            </div>
+          </div>
+          <br />
+          <div class="customizationButtons">
+            <button id="randToken">Random Token</button>
+            <button id="defaultToken">Default Token</button>
+            <button id="createTokenGen0">Create</button>
+          </div>
+        </div>
+
+        <div class="bubbleFishSettings m-5 light-b-shadow">
+          <button id="toggleSettings">Colors</button>
+          <!-- Cat colors -->
+          <div id="colors">
+            <div class="form-group">
+              <label for="formControlRange">
+                <b>Upper Body</b
+                ><span class="badge badge-dark ml-2" id="headcode"></span
+              ></label>
+              <input
+                type="range"
+                min="10"
+                max="91"
+                class="form-control-range"
+                id="bodycolor"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formControlRange"
+                ><b>Lower Body</b
+                ><span class="badge badge-dark ml-2" id="lowerbodycode"></span
+              ></label>
+              <input
+                type="range"
+                min="10"
+                max="91"
+                class="form-control-range"
+                id="lowerbodycolor"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formControlRange"
+                ><b>Upper Fins</b
+                ><span class="badge badge-dark ml-2" id="upperfinscode"></span
+              ></label>
+              <input
+                type="range"
+                min="10"
+                max="91"
+                class="form-control-range"
+                id="upperfinscolor"
+              />
+            </div>
+            <div class="form-group">
+              <label for="formControlRange"
+                ><b>Lower Fins</b
+                ><span class="badge badge-dark ml-2" id="lowerfinscode"></span
+              ></label>
+              <input
+                type="range"
+                min="10"
+                max="91"
+                class="form-control-range"
+                id="lowerfinscolor"
+              />
+            </div>
+          </div>
+
+          <div id="attributes"></div>
+        </div>
+      </div>
+      <div class="newTokenFeedback"></div>
+      <br />
+    </div>
+    <!-- Home -->
+    <div class="Home">
+      <div class="ChainId"><button>OK</button></div>
+      <ul id="homeBubbleFishes">
+        <li>
+          <img
+            src="./assets/img/screenshot-127.0.0.1_5500-2021.12.10-21_12_37.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/img/screenshot-127.0.0.1_5500-2021.12.10-21_13_17.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/img/screenshot-127.0.0.1_5500-2021.12.10-21_14_04.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/img/screenshot-127.0.0.1_5500-2021.12.10-21_14_30.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/img/screenshot-127.0.0.1_5500-2021.12.10-21_15_16.png"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="./assets/img/screenshot-127.0.0.1_5500-2021.12.10-21_16_26.png"
+            alt=""
+          />
+        </li>
+      </ul>
+      <button id="getYourOwnBubbleFish"></button>
+    </div>
+    <!-- Catalogue -->
+    <div class="Catalogue">
+      <div id="CollectionPanel">
+        <button class="breedButton">Breed</button>
+        <ul class="bubbleFishContainer"></ul>
+      </div>
+      <div id="MergePanel">
+        <div id="mergePanelOptions">
+          <button id="cancelBreeding">Back</button>
+          <button id="confirmBreeding">Continue</button>
+        </div>
+        <div id="fishesToMerge"></div>
+      </div>
+      <div class="catNewFishFeedback_Container">
+        <div class="catNewFishFeedback_Ratio">
+          <div class="content">
+            <div class="newFish"></div>
+            <button class="closeNewBubbleFishPanel"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Market -->
+    <div class="Market">
+      <input type="checkbox" />
+      <ul class="Market_bubbleFishContainer"></ul>
+      <div
+        class="selectedFishMarketPlace"
+        style="display: flex; flex-direction: column; align-items: center"
+      ></div>
+    </div>
+    <div id="marketplaceAllowancePanel" style="display: none">
+      <h2>Authorize Marketplace to be able to sell.</h2>
+      <div>
+        <button class="cancel" onclick="cancelAllowMarketHandleCollection()">
+          Cancel</button
+        ><button class="procced" onclick="allowMarketHandleCollection()">
+          Proceed
+        </button>
+      </div>
+    </div>
+    <footer>
+      <div>
+        <p>
+          This is my first ERC721 and Marketplace deployed. It might come with
+          bugs. You can help me improve it!
+        </p>
+        <p>@ItsJackAnton November 2021</p>
+      </div>
+      <ul class="social-menu">
+        <li class="social-element twitter">
+          <a href="https://twitter.com/ItsJackAnton">
+            <img src="./assets/img/icon/Twitter.png" alt="" />
+          </a>
+        </li>
+        <li class="social-element linkedin">
+          <a href="https://www.linkedin.com/in/jack-anton-912772b9/">
+            <img src="./assets/img/icon/Untitled-2.png" alt="" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script src="assets/js/colors.js"></script>
+  <script src="assets/js/catSettings.js"></script>
+  <script src="assets/js/catFactory.js"></script>
+  <script src="./index.js"></script>
+  <script src="./assets/js/Navigation.js"></script>
+</html>

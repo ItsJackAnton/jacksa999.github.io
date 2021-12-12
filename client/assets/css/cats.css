@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --top_body_color: #c1abda;
+  --bottom_body_color: #86e3ce;
+  --top_fins_color: #d0e6a5;
+  --bottom_fins_color: #fc887b;
+}
+.fish_container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(228, 154, 255);
+  border-radius: 5%;
+}
+.dnaDiv {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+
+.dnaDiv span,
+b {
+  color: #ededed;
+}
+
+.Animator {
+  position: absolute;
+  /* left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px; */
+  left: 25px;
+  right: 25px;
+  top: 25px;
+  bottom: 25px;
+}
+.fish {
+  position: absolute;
+  height: 65%;
+  width: 65%;
+  background-color: var(--bottom_body_color);
+
+  transform: translate(25%, 25%);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.topFish {
+  height: 100%;
+  width: 200%;
+  bottom: 35%;
+  left: -50%;
+  background-color: var(--top_body_color);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mouth,
+.mouth-border {
+  width: 15%;
+  height: 18%;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  left: 13%;
+}
+.mouth {
+  background-color: var(--bottom_body_color);
+  width: 75%;
+  height: 75%;
+  top: 14%;
+  left: 12%;
+}
+.mouth-border {
+  background-color: var(--top_body_color);
+  box-shadow: 2px 0px 2px #00000060;
+}
+.eye {
+  border-radius: 50%;
+  width: 10%;
+  height: 15%;
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  left: 7.5%;
+  transform: rotate(-15deg);
+  box-shadow: 1px 0px 2px 2px #00000025;
+}
+.eyer_r {
+  left: 30%;
+  transform: rotate(15deg);
+}
+
+.pupile {
+  width: 60%;
+  height: 60%;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.back_fin {
+  width: 17%;
+  height: 33%;
+  background-color: var(--bottom_fins_color);
+  border-radius: 50%;
+  clip-path: polygon(0 29%, 100% 0, 100% 100%, 0 76%);
+  position: absolute;
+  top: 36%;
+  left: 77%;
+}
+
+.lower_fin {
+  width: 16%;
+  height: 12%;
+  background-color: var(--bottom_fins_color);
+  border-radius: 50%;
+  transform: rotate(25deg);
+  position: absolute;
+  top: 72%;
+  left: 57%;
+}
+
+.upper_fin {
+  top: 20%;
+  left: 67%;
+  transform: rotate(15deg);
+  border-radius: 100%;
+  clip-path: polygon(100% 0, 0 50%, 75% 100%);
+  background-color: var(--top_fins_color);
+}
+.side_fin {
+  width: 20%;
+  height: 13%;
+  border-radius: 50%;
+  background-color: var(--top_fins_color);
+  position: absolute;
+  left: 47%;
+  top: 43%;
+}
+.side_fin::after {
+}
+.gill {
+  content: "";
+  width: 10%;
+  height: 18%;
+  border-radius: 50%;
+  background-color: var(--top_body_color);
+  position: absolute;
+  left: 43%;
+  top: 40%;
+  box-shadow: 3px 0px 0px 1px grey;
+}
+
+.normalEyebrowStyle {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  bottom: 34%;
+  background-color: var(--bottom_body_color);
+}
+.tiltRightEyebrow {
+  transform: rotate(-20deg);
+}
+.tiltLeftEyebrow {
+  transform: rotate(20deg);
+}
+
+.fishRotAnim {
+  animation: rotAnim 5s infinite linear;
+}
+.fishUpAnim {
+  animation: upAnim 5s infinite linear;
+}
+.fishSideAnim {
+  animation: sideAnim 5s infinite linear;
+}
+
+@keyframes rotAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes upAnim {
+  0% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(15px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes sideAnim {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.fishGen {
+  position: absolute;
+  color: #ededed;
+  font-weight: bold;
+  font-size: 1.5em;
+  left: 5%;
+  top: 2%;
+}

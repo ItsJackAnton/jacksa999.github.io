@@ -1,0 +1,61 @@
+.catBox {
+  background-color: #e2efff;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding-left: 65px;
+  padding-bottom: 100px;
+  flex: auto;
+}
+
+.row {
+  justify-content: center;
+}
+.bubbleFishSettings {
+  padding: 25px;
+  background-color: #ededed;
+  border-radius: 10px;
+  height: auto;
+  width: 300px;
+}
+#colors {
+  position: relative;
+  width: 100%;
+}
+
+#attributes {
+  position: relative;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+}
+.form-group label b {
+  color: black;
+}
+.customizationButtons {
+  position: relative;
+  bottom: -10%;
+}
+.customizationButtons button {
+  border-radius: 7px;
+  padding: 2px 2px;
+}
+
+.factory {
+  min-height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newTokenFeedback {
+  background-color: rgb(183, 255, 231);
+  width: 40%;
+  height: auto;
+  margin: 10px 30px;
+  border-radius: 6%;
+  display: none;
+  text-align: center;
+  padding: 5px;
+  word-wrap: break-word;
+}
